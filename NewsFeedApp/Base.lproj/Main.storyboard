@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tfx-6L-eo7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GreeksForGreeks-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewsViewController" customModule="NewsFeedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-cs-jBa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jNx-HT-GPJ">
+                                        <rect key="frame" x="12" y="12" width="390" height="762"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="0HE-hh-GxK"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="FMP-vr-HU7"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jNx-HT-GPJ" firstAttribute="leading" secondItem="UlP-cs-jBa" secondAttribute="leading" constant="12" id="3IT-3R-6Ni"/>
+                                    <constraint firstAttribute="trailing" secondItem="jNx-HT-GPJ" secondAttribute="trailing" constant="12" id="AnU-25-kcY"/>
+                                    <constraint firstItem="jNx-HT-GPJ" firstAttribute="top" secondItem="UlP-cs-jBa" secondAttribute="top" constant="12" id="iX1-QP-tfC"/>
+                                    <constraint firstAttribute="bottom" secondItem="jNx-HT-GPJ" secondAttribute="bottom" id="ya6-YQ-bnN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UlP-cs-jBa" secondAttribute="trailing" id="2mN-PM-qbU"/>
+                            <constraint firstItem="UlP-cs-jBa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CLG-Q0-eHb"/>
+                            <constraint firstItem="UlP-cs-jBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G8c-RM-HY6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UlP-cs-jBa" secondAttribute="bottom" id="yhx-Si-Zbz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GreeksForGreeks" id="Knz-ca-L79"/>
+                    <connections>
+                        <outlet property="myTable" destination="jNx-HT-GPJ" id="BoK-FH-pPn"/>
+                        <outlet property="viewParentView" destination="UlP-cs-jBa" id="hp6-DV-oLo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="64.955357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="biq-TR-bro">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tfx-6L-eo7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wId-PR-Hm9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7YN-Vm-0FE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sse-gT-tyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.36231884057972" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
